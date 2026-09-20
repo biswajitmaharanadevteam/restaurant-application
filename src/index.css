@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Cinzel', serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Outfit', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0b0d14;
+    color: #f3f4f6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111420;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Regal Glassmorphism */
+.glass-panel {
+  background: rgba(18, 22, 34, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.glass-panel-gold {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.12) 0%, rgba(15, 18, 28, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.glass-card {
+  background: rgba(22, 27, 43, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Subtle Shimmer & Glow */
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(217, 119, 6, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(217, 119, 6, 0.5);
+  }
+}
+
+.glow-gold {
+  animation: goldPulse 3.5s infinite ease-in-out;
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.copper-gradient-text {
+  background: linear-gradient(135deg, #fed7aa 0%, #ea580c 60%, #9a3412 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Islamic & Arabian Arch Motifs */
+.arch-top {
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+}
+
+.arch-full {
+  border-radius: 9999px 9999px 1rem 1rem;
+}
